@@ -3,11 +3,15 @@ import { useCart } from "../context/CartContext";
 import ShopNowButton from "../components/ShopNowButton";
 
 const ShoppingCart = () => {
-  const { cart, addToCart, removeFromCart } = useCart();
+  const { cart, addToCart, removeFromCart,removeProduct } = useCart();
   const [quantity, setQuantity] = React.useState(1);
+  
+   
 
-  const handleDelete = (id) => {
-    removeProduct(id);
+
+  const handleDelete = (id)=> {
+    removeProduct(id)
+;
 ;
   };
 
@@ -43,6 +47,8 @@ const ShoppingCart = () => {
                 event.preventDefault();
                 setQuantity(product.quantity + 1);
                 addToCart(product, product.quantity);
+                
+               
               }}
             >
               +
@@ -51,7 +57,10 @@ const ShoppingCart = () => {
 
           <button onClick={() => handleDelete(product.id)}>Remove</button>
         </div>
+        
+
       ))}
+     
     </div>
   );
 };

@@ -32,7 +32,7 @@ const styles = {
 
 const AppBar = () => {
   const { isAuthenticated, logout } = useAuth();
-  const { cart } = useCart();
+  const {cart}=useCart();
 
   console.log(isAuthenticated);
   return (
@@ -74,7 +74,6 @@ const AppBar = () => {
             </Link>
             
           )}
-          
         </li>
         <li style={styles.navItem}>
           <Link to="/shopping-cart" style={styles.navLink}>
@@ -84,11 +83,26 @@ const AppBar = () => {
                 fontSize: "20px",
                 cursor: "pointer",
               }}
-              
             />
+            {cart.length > 0 && (
+              <span
+                style={{
+                  background: "red",
+                  color: "white",
+                  position: "relative",
+                  top: "-10px",
+                  right: "-5px",
+                  padding: "0 5px",
+                  borderRadius: "8px",
+                  fontSize: "14px",
+                  fontWeight: "bold",
+                }}
+              >
+                {cart.length}
+              </span>
             
+            )}
           </Link>
-          
         </li>
       </ul>
     </nav>
