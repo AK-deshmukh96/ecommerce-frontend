@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import { AuthProvider } from "./context/AuthContext";
 import ShoppingCart from "./pages/ShoppingCart";
 import { CartProvider } from "./context/CartContext";
+import CheckoutPage from "./pages/CheckoutPage";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/products/:productId" element={<ProductDetails />} />
           <Route path="/login" element={<Login />} />
           <Route path="/shopping-cart" element={<ShoppingCart />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
         </Routes>
       </Router>
       </CartProvider>
