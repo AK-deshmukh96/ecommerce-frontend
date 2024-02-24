@@ -25,6 +25,7 @@ const ShoppingCart = () => {
   };
 
   console.log("Cart", cart);
+  console.log("Quantity", quantity);
 
   return (
     <div>
