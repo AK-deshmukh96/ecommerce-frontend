@@ -4,6 +4,7 @@ import ShopNowButton from "../components/ShopNowButton";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
+
 const counterButtonStyle = {
   margin: "10px",
   padding: "4px 8px",
@@ -118,6 +119,7 @@ const ShoppingCart = () => {
           </Link>
         </div>
       )}
+     
     </div>
   );
 };

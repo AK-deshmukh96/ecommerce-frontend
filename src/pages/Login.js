@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -72,7 +71,16 @@ const LoginPage = () => {
           Login
         </button>
       </form>
+      <div>
+    
     </div>
+   
+     
+    </div>
+    
+   
+    
+    
   );
 };
 
